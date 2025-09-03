@@ -1,0 +1,73 @@
+body {
+  background: #f5f6fa;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  padding: 30px 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.MuiContainer-root {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+}
+
+.MuiTextField-root {
+  margin-bottom: 16px !important;
+}
+
+.MuiButton-contained {
+  background: #1976d2 !important;
+  color: #fff !important;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.MuiListItem-root {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background: #f0f4ff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 18px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.MuiListItemText-primary {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.MuiListItemText-secondary {
+  color: #444;
+  font-size: 1rem;
+}
+
+.MuiIconButton-root {
+  margin-left: 8px;
+  color: #1976d2 !important;
+}
+
+.MuiDialogTitle-root {
+  font-weight: 700;
+  color: #1976d2;
+}
+
+.MuiDialogContent-root {
+  padding-bottom: 0 !important;
+}
+
+.MuiSnackbar-root {
+  z-index: 9999;
+}
