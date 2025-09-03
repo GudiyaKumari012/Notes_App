@@ -29,7 +29,7 @@ function App() {
 
   const fetchNotes = async () => {
     try {
-      const res = await axios.get('http://127.0.0.1:8000/notes/');
+      const res = await axios.get('https://notes-app-iwa9.onrender.com/notes/');
       setNotes(res.data);
     } catch {
       setSnackbar({ open: true, message: 'Failed to fetch notes' });
@@ -41,7 +41,7 @@ function App() {
       setSnackbar({ open: true, message: 'Title and content required' });
       return;
     }
-    await axios.post('http://127.0.0.1:8000/notes/', { title, content });
+    await axios.post('https://notes-app-iwa9.onrender.com/notes/', { title, content });
     fetchNotes();
     setTitle(''); setContent('');
     setSnackbar({ open: true, message: 'Note added' });
@@ -56,7 +56,7 @@ function App() {
 
   const updateNote = async () => {
     if (editId !== null) {
-      await axios.put(`http://127.0.0.1:8000/notes/${editId}`, { title: editTitle, content: editContent });
+      await axios.put(`https://notes-app-iwa9.onrender.com/notes/${editId}`, { title: editTitle, content: editContent });
       fetchNotes();
       setOpen(false);
       setSnackbar({ open: true, message: 'Note updated' });
@@ -65,7 +65,7 @@ function App() {
 
   const deleteNote = async (id: number) => {
     if (window.confirm('Delete this note?')) {
-      await axios.delete(`http://127.0.0.1:8000/notes/${id}`);
+      await axios.delete(`https://notes-app-iwa9.onrender.com/notes/${id}`);
       fetchNotes();
       setSnackbar({ open: true, message: 'Note deleted' });
     }
